@@ -19,6 +19,7 @@ class scrapePlayerData(object):
             self.pattern = re.compile(r"^(?:\\.|[^/\\])*/((?:\\.|[^/\\])*)/")
             self.statsDict = collections.OrderedDict([('GP', None),('MIN', None),('FGM', None),('FGA', None),('FG%', None),('3PM', None),('3PA', None),('3P%', None),('FTM', None),('FTA', None),('FT%', None),('OREB', None),('DREB', None),('REB', None),('AST', None),('TOV', None),('STL', None),('BLK', None),('PTS', None),('FanDuel', None)])
             self.fantasyPlayerInfo = []
+            self.fantasyPanda = pd.DataFrame()
 
 
         def openBrowser(self):
@@ -68,39 +69,22 @@ class scrapePlayerData(object):
                                 placeHolderArray.append(float(string))
                             except:
                                try:
-                                   newString = re.match(r"([^\s]+)", string).group(1)
-                                   placeHolderArray.append(float(newString))
+                                   if 'Days' not in string:
+                                       newString = re.match(r"([^\s]+)", string).group(1)
+                                       placeHolderArray.append(float(newString))
                                except:
                                    pass
                     N = 20
+
                     separatedList = [placeHolderArray[n:n+N] for n in range(0, len(placeHolderArray), N)]
                     for sublist in separatedList:
                         for x in range(0,len(sublist)):
-                            self.statsDict.values()[x] = sublist[x]
-                        self.fantasyPlayerInfo.append(self.statsDict)
-                    print self.fantasyPlayerInfo
-
-
-
-                    #     print table
-                    # tables = soup.find_all('tr', class_= 'ng-scope')
-                    # # for table in tables:
-                    # #     for element in table.find_all('td'):
-                    # #         print element.text
-                    # # time.sleep(200)
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            self.statsDict[self.statsDict.keys()[x]] = sublist[x]
+                            self.statsDict[self.statsDict.keys()[x]]
+                        self.fantasyPanda = self.fantasyPanda.append(self.statsDict, ignore_index = True)
+                    # self.fantasyPanda(index = ['2015-2016', 'Home','Road','Last_5_Games','Last_10_Games','0_Days_Rest','1_Days_Rest','2+_Days_Rest','Atlanta_Hawks','Boston_Celtics','Brooklyn_Nets','Charlotte_Hornets','Cleveland_Cavaliers','Dallas_mavericks','Denver_Nuggets','Detriot_Pistons','Golden_State_Warriors','Indiana_Pacers','Clippers','Lakers','Grizzlies','Heat','Bucks','Timberwolves','Pelicans','Knicks','Thunder','Magic','76ers','Suns','Trail Blazers','Kings','Raptors','Jazz','Wizards'])
+                    with pd.option_context('display.max_rows', 9999,'display.max_columns',9999):
+                        print self.fantasyPanda
 
 start = scrapePlayerData()
 start.openBrowser()
