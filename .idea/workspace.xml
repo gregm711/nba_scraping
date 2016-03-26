@@ -24,8 +24,8 @@
       <file leaf-file-name="nbaScraping.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nbaScraping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64285713">
-              <caret line="84" column="503" selection-start-line="84" selection-start-column="503" selection-end-line="84" selection-end-column="503" />
+            <state vertical-scroll-proportion="0.5535714">
+              <caret line="83" column="74" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -260,6 +260,9 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="83c4d41b-c306-4e86-aed3-91c876d3d364" name="Default" comment="" />
@@ -292,6 +295,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -320,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nbaScraping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64285713">
-          <caret line="84" column="503" selection-start-line="84" selection-start-column="503" selection-end-line="84" selection-end-column="503" />
+        <state vertical-scroll-proportion="0.5535714">
+          <caret line="83" column="74" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
